@@ -6,6 +6,16 @@ public class Annonce {
 	private String intitule;
 	private String detail;
 	private Double prix;
+	private int idPersonne;
+	
+	
+	
+	public int getIdPersonne() {
+		return idPersonne;
+	}
+	public void setIdPersonne(int idPersonne) {
+		this.idPersonne = idPersonne;
+	}
 	public int getIdAnnonce() {
 		return idAnnonce;
 	}
@@ -35,6 +45,11 @@ public class Annonce {
 		this.intitule = intitule;
 		this.detail = detail;
 		this.prix = prix;
+	}
+	@Override
+	public String toString() {
+		return "Annonce [idAnnonce=" + idAnnonce + ", intitule=" + intitule + ", detail=" + detail + ", prix=" + prix
+				+ "]";
 	}
 	
 	

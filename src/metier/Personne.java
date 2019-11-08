@@ -57,6 +57,11 @@ public class Personne {
 	public void setDateDeNaissance(Date dateDeNaissance) {
 		this.dateDeNaissance = dateDeNaissance;
 	}
+	@Override
+	public String toString() {
+		return "Personne [personneId=" + personneId + ", nom=" + nom + ", prenom=" + prenom + ", login=" + login
+				+ ", motDePasse=" + motDePasse + ", dateDeNaissance=" + dateDeNaissance + "]";
+	}
 	
 	
 }
