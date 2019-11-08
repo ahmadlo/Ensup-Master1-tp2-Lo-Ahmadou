@@ -13,6 +13,14 @@ public class Personne {
 	
 	
 	
+	public Personne(int personneId, String nom, String prenom, String login, String motDePasse, Date dateDeNaissance) {
+		this.personneId = personneId;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.login = login;
+		this.motDePasse = motDePasse;
+		this.dateDeNaissance = dateDeNaissance;
+	}
 	public int getPersonneId() {
 		return personneId;
 	}

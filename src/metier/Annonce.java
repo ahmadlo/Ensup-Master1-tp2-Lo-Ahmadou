@@ -30,6 +30,12 @@ public class Annonce {
 	public void setPrix(Double prix) {
 		this.prix = prix;
 	}
+	public Annonce(int idAnnonce, String intitule, String detail, Double prix) {
+		this.idAnnonce = idAnnonce;
+		this.intitule = intitule;
+		this.detail = detail;
+		this.prix = prix;
+	}
 	
 	
 	

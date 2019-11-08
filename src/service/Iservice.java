@@ -5,6 +5,8 @@ import java.util.List;
 import metier.*;
 public interface Iservice {
 
+	
+	public List<Personne> init();
 	//Crud Personne
 	 public int creerPersonne(List<Personne> list, Personne personne);
 	 public Personne getPersonne(List<Personne> list,int idPersonne);
