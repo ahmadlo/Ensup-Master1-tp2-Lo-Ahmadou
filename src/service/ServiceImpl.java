@@ -18,13 +18,13 @@ public class ServiceImpl implements Iservice {
 		//Crud Personne
 	@Override
 	public List<Personne> init() {
-		Personne loik = new Personne(base.size()+1, "Froeich", "Loïc", "atLoik", "Zapper", new Date(1995, 5, 18));
+		Personne loik = new Personne(base.size()+1, "Froeich", "Loïc", "atLoik", "Zapper", new Date("1995/5/18"));
 		base.add(loik);
 		
-		Personne fatima = new Personne(base.size()+1, "Ba", "Fatima", "timzii", "Passer12", new Date(1982, 12, 28));
+		Personne fatima = new Personne(base.size()+1, "Ba", "Fatima", "timzii", "Passer12", new Date("1982/12/28" ));
 		base.add(fatima);
 		
-		Personne gio = new Personne(base.size()+1, "Simon", "Gio", "gogo", "Aimer", new Date(1935, 1, 3));
+		Personne gio = new Personne(base.size()+1, "Simon", "Gio", "gogo", "Aimer", new Date("1935/1/3" ));
 		base.add(gio);
 		
 		return base ;
