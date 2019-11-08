@@ -52,6 +52,7 @@ public class ServiceImpl implements Iservice {
 		for (Personne personne : list) {
 			if (personne.getPersonneId() == idPersonne) {
 				list.remove(personne);
+				break;
 			}
 		}
 
@@ -64,6 +65,7 @@ public class ServiceImpl implements Iservice {
 				personne.setNom(nom);
 				personne.setPrenom(prenom);
 				personne.setDateDeNaissance(dateNaissance);
+				break;
 			}
 		}
 
@@ -105,32 +107,57 @@ public class ServiceImpl implements Iservice {
 	
 	@Override
 	public int creerAnnonce(Personne personne, Annonce a) {
-		// TODO Auto-generated method stub
-		return 0;
+		a.setIdPersonne(personne.getPersonneId());
+		annonces.add(a);
+		return 1;
 	}
 
 	@Override
 	public Annonce getAnnonce(Personne personne, int idAnnonce) {
-		// TODO Auto-generated method stub
+		for (Annonce annonce : annonces) {
+			
+			if (annonce.getIdAnnonce() == idAnnonce & annonce.getIdPersonne() == personne.getPersonneId()) {
+				return annonce;
+			}
+		}
 		return null;
 	}
 
 	@Override
 	public void deleteAnnonce(Personne personne, int idAnnonce) {
-		// TODO Auto-generated method stub
+for (Annonce annonce : annonces) {
+			
+			if (annonce.getIdAnnonce() == idAnnonce & annonce.getIdPersonne() == personne.getPersonneId()) {
+				annonces.remove(annonce);
+				break;
+			}
+		}
+		
 
 	}
 
 	@Override
 	public void updateAnnonce(Personne personne, Annonce a) {
-		// TODO Auto-generated method stub
+
+for (Annonce annonce : annonces) {
+			
+			if (annonce.getIdAnnonce() == a.getIdAnnonce() & annonce.getIdPersonne() == personne.getPersonneId()) {
+				annonce.setIntitule("je cahnge de titre");
+				break;
+			}
+		}
 
 	}
 
 	@Override
 	public List<Annonce> findAllAnnonce(Personne personne) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Annonce> annoncesPerso = new ArrayList<Annonce>();
+		for (Annonce annonce : annonces) {
+			if (annonce.getIdPersonne() == personne.getPersonneId()) {
+				annoncesPerso.add(annonce);
+			}
+		}
+		return annoncesPerso;
 	}
 
 	
