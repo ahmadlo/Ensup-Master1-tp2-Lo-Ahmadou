@@ -31,6 +31,8 @@ public class Lanceur {
 		// recuperer la personne apres modification"
 				 p = iservice.getPersonne(ServiceImpl.base, 2);
 				System.out.println(p.toString());
+				
+	
 
 	}
 
